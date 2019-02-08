@@ -334,7 +334,7 @@ func (c *LiveConfig) GetStringSlice(ns, key string) ([]string, error) {
 	return out, nil
 }
 
-// This is needed because an empty StringSlice flag returns `["[]"]`
+// emptyStringSlice is needed because an empty StringSlice flag returns `["[]"]`
 func emptyStringSlice(s []string) bool {
 	return len(s) == 1 && s[0] == "[]"
 }

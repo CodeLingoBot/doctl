@@ -74,7 +74,7 @@ func RAMInBytes(size string) (int64, error) {
 	return parseSize(size, binaryMap)
 }
 
-// Parses the human-readable size string into the amount it represents.
+// parseSize; the human-readable size string into the amount it represents.
 func parseSize(sizeStr string, uMap unitMap) (int64, error) {
 	matches := sizeRegex.FindStringSubmatch(sizeStr)
 	if len(matches) != 3 {

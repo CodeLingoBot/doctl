@@ -22,7 +22,7 @@ func prepareTempFile(t *testing.T) (string, string) {
 	return file, dir
 }
 
-// TestChtimes tests Chtimes on a tempfile. Test only mTime, because aTime is OS dependent
+// OffTestChtimes tests Chtimes on a tempfile. Test only mTime, because aTime is OS dependent
 // NOTE: does this even work on darwin?
 func OffTestChtimes(t *testing.T) {
 	file, dir := prepareTempFile(t)

@@ -87,7 +87,7 @@ func assertEquals(t *testing.T, expected, actual interface{}) {
 // func that maps to the parse function signatures as testing abstraction
 type parseFn func(string) (int64, error)
 
-// Define 'String()' for pretty-print
+// String; Define 'String()' for pretty-print
 func (fn parseFn) String() string {
 	fnName := runtime.FuncForPC(reflect.ValueOf(fn).Pointer()).Name()
 	return fnName[strings.LastIndex(fnName, ".")+1:]
